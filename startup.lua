@@ -1,1 +1,1 @@
-shell.run("menu.lua")
+shell.run("egde/menu.lua")
