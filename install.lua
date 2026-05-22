@@ -9,7 +9,7 @@ for i = 1, ender do
     local index = ((i - 1) % #spinnerChars) + 1
     term.write(spinnerChars[index])
     sleep(0.1)
-    if finished == 0
+    if finished == 0 then
         term.setCursorPos(1,4)
         print("menu.lua: Unfinished")
         print("eggshell.lua: Unfinished")
@@ -19,7 +19,7 @@ for i = 1, ender do
         print("eggshells/help.lua: Unfinished")
         print("eggshells/time.lua: Unfinished")
         print("startup.lua: Unfinished")
-    elseif finished == 1
+    elseif finished == 1 then
         print("menu.lua: Finished")
         print("eggshell.lua: Unfinished")
         print("egdia.lua: Unfinished")
@@ -28,7 +28,7 @@ for i = 1, ender do
         print("eggshells/help.lua: Unfinished")
         print("eggshells/time.lua: Unfinished")
         print("startup.lua: Unfinished")
-    elseif finished == 2
+    elseif finished == 2 then
         print("menu.lua: Finished")
         print("eggshell.lua: Finished")
         print("egdia.lua: Unfinished")
@@ -37,7 +37,7 @@ for i = 1, ender do
         print("eggshells/help.lua: Unfinished")
         print("eggshells/time.lua: Unfinished")
         print("startup.lua: Unfinished")
-    elseif finished == 3
+    elseif finished == 3 then
         print("menu.lua: Finished")
         print("eggshell.lua: Finished")
         print("egdia.lua: Finished")
@@ -46,7 +46,7 @@ for i = 1, ender do
         print("eggshells/help.lua: Unfinished")
         print("eggshells/time.lua: Unfinished")
         print("startup.lua: Unfinished")
-    elseif finished == 4
+    elseif finished == 4 then
         print("menu.lua: Finished")
         print("eggshell.lua: Finished")
         print("egdia.lua: Finished")
@@ -55,7 +55,7 @@ for i = 1, ender do
         print("eggshells/help.lua: Unfinished")
         print("eggshells/time.lua: Unfinished")
         print("startup.lua: Unfinished")
-    elseif finished == 5
+    elseif finished == 5 then
         print("menu.lua: Finished")
         print("eggshell.lua: Finished")
         print("egdia.lua: Finished")
@@ -64,7 +64,7 @@ for i = 1, ender do
         print("eggshells/help.lua: Unfinished")
         print("eggshells/time.lua: Unfinished")
         print("startup.lua: Unfinished")
-    elseif finished == 6
+    elseif finished == 6 then
         print("menu.lua: Finished")
         print("eggshell.lua: Finished")
         print("egdia.lua: Finished")
@@ -73,7 +73,7 @@ for i = 1, ender do
         print("eggshells/help.lua: Finished")
         print("eggshells/time.lua: Unfinished")
         print("startup.lua: Unfinished")
-    elseif finished == 7
+    elseif finished == 7 then
         print("menu.lua: Finished")
         print("eggshell.lua: Finished")
         print("egdia.lua: Finished")
@@ -82,7 +82,7 @@ for i = 1, ender do
         print("eggshells/help.lua: Finished")
         print("eggshells/time.lua: Finished")
         print("startup.lua: Unfinished")
-    elseif finished == 8
+    elseif finished == 8 then
         print("menu.lua: Finished")
         print("eggshell.lua: Finished")
         print("egdia.lua: Finished")
