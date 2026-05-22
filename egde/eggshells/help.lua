@@ -1,0 +1,6 @@
+term.setTextColor(colors.white)
+print("Back - Return to the homescren")
+print("Craftsh - Enter default CraftOS shell")
+print("Help - List all commands")
+print("Time - Get current time")
+print("Sh <command> - Run a command with CraftOS shell")
