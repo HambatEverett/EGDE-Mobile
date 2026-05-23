@@ -41,13 +41,14 @@ function display()
     elseif screen == "updateask" then
       term.setCursorPos((tx/2)-6, ty/2)
       term.write("Are you sure?")
-      term.setCursorPos((tx/2)-19, ty/2+1)
+      term.setCursorPos((tx/2)-12, ty/2+1)
       term.write("This could delete files.")
-      term.setCursorPos(tx/2,(ty/2)+1)
-      if io.read():lower() == "y" or io.read():lower() == "yes" then
+      term.setCursorPos(tx/2,(ty/2)+2)
+      local input = io.read():lower()
+      if input == "yes" or input == "y" then
         shell.run("wget run https://github.com/HambatEverett/EGDE-Mobile/raw/refs/heads/main/install.lua")
       else
-        print("Okay, aborting")
+        print("Aborting")
         sleep(1)
         return
       end
