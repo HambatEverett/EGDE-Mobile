@@ -7,6 +7,7 @@ shell.run("wget https://github.com/HambatEverett/EGDE-Mobile/raw/refs/heads/main
 shell.run("wget https://github.com/HambatEverett/EGDE-Mobile/raw/refs/heads/main/egde/assets/sat2.nfp")
 shell.run("wget https://github.com/HambatEverett/EGDE-Mobile/raw/refs/heads/main/egde/eggshells/help.lua")
 shell.run("wget https://github.com/HambatEverett/EGDE-Mobile/raw/refs/heads/main/egde/eggshells/time.lua")
-shell.run("wget")
+shell.run("wget https://github.com/HambatEverett/EGDE-Mobile/raw/refs/heads/main/egde/assets/button1.nfp")
+shell.run("wget ")
 sleep(1)
 os.reboot()
