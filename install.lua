@@ -1,6 +1,6 @@
 term.clear()
 
-shell.run("rm egde/")
+shell.run("rm egde/*")
 shell.run("wget https://github.com/HambatEverett/EGDE-Mobile/raw/refs/heads/main/egde/menu.lua egde/menu.lua")
 shell.run("wget https://github.com/HambatEverett/EGDE-Mobile/raw/refs/heads/main/egde/eggshell.lua egde/eggshell.lua")
 shell.run("wget https://github.com/HambatEverett/EGDE-Mobile/raw/refs/heads/main/egde/egdia.lua egde/egdia.lua")
