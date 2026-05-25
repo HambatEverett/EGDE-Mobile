@@ -11,12 +11,8 @@ function organs()
     event, button, x, y = os.pullEvent("mouse_click")
     if x == 1 and y == ty then return end
     if screen == "main" then
-      if x >= 2 and x <= 25 and y >= 2 and y <= 6 then
-        screen = "updateask"
-      end
-    elseif screen == "updateask" then
-      local event, key, is_held = os.pullEvent("key")
-      term.setCursorPos((term.getCursorPos()[1]-1))
+      if x >= 2 and x <= 25 and y >= 2 and y <= 6 then screen = "updateask" end
+      if x >= 2 and x <= 25 and y >= 8 and y <= 13 then screen = "changename" end
     end
   end
 end
@@ -30,28 +26,44 @@ function display()
       term.setTextColor(colors.black)
       term.setBackgroundColor(colors.red)
       term.write("<")
+
+      -- upd egde
       term.setCursorPos(((tx/2)-11),2)
       paintutils.drawImage(btn1, term.getCursorPos())
       term.setCursorPos(((tx/2)-7),4)
       term.setTextColor(colors.black)
       term.setBackgroundColor(colors.lightGray)
       term.write("Update Evergreen")
+
+      -- change username
+      term.setCursorPos(((tx/2)-11),8)
+      paintutils.drawImage(btn1, term.getCursorPos())
+      term.setCursorPos(((tx/2)-7),10)
+      term.setTextColor(colors.black)
+      term.setBackgroundColor(colors.lightGray)
+      term.write("Select Username")
       term.setTextColor(colors.white)
       term.setBackgroundColor(colors.black)
     elseif screen == "updateask" then
       term.setCursorPos((tx/2)-6, ty/2)
       term.write("Are you sure?")
-      term.setCursorPos((tx/2)-12, ty/2+1)
-      term.write("This could delete files.")
+      term.setCursorPos((tx/2)-10, ty/2+1)
+      term.setTextColor(colors.red)
+      term.write("This could cause harm!")
+      term.setTextColor(colors.white)
       term.setCursorPos(tx/2,(ty/2)+2)
       local input = io.read():lower()
       if input == "yes" or input == "y" then
         shell.run("wget run https://github.com/HambatEverett/EGDE-Mobile/raw/refs/heads/main/install.lua")
       else
-        print("Aborting")
-        sleep(1)
-        return
+        screen = "main"
       end
+    elseif screen == "changename" then
+      term.setCursorPos((tx/2)-9, ty/2)
+      term.write("Input New Username")
+      term.setCursorPos((tx/2)-10, ty/2+1)
+      local input = io.read():lower()
+
     end
   end
 end
