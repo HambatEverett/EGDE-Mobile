@@ -62,8 +62,10 @@ function display()
       term.setCursorPos((tx/2)-9, ty/2)
       term.write("Input New Username")
       term.setCursorPos((tx/2)-10, ty/2+1)
-      local input = io.read():lower()
-
+      local input = io.read()
+      settings.set("username", input)
+      settings.save(".settings")
+      screen = "main"
     end
   end
 end
