@@ -37,6 +37,9 @@ function frontend()
     term.setBackgroundColor(colors.orange)
     print("#")
   end
+  term.setTextColor(colors.black)
+  term.setCursorPos(1, 1)
+  term.write(settings.get("username"))
 
   -- draw apps
   term.setCursorPos(3,3)
