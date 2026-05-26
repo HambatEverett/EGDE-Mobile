@@ -5,5 +5,12 @@ if not settings.get("username") then
       type = "string",
   })
 end
+if not settings.get("topcolor") then
+  settings.define("topcolor", {
+      description = "The user's topbar color",
+      default = 8192,
+      type = "number",
+  })
+end
 
 shell.run("egde/menu.lua")
