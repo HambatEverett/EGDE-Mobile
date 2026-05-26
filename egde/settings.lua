@@ -15,8 +15,6 @@ function organs()
       if x >= 2 and x <= 25 and y >= 2 and y <= 6 then screen = "updateask" end
       if x >= 2 and x <= 25 and y >= 8 and y <= 13 then screen = "changename" end
       if x >= 2 and x <= 25 and y >= 14 and y <= 19 then screen = "changetc" end
-    elseif screen == "changetc" then
-      if
     end
   end
 end
