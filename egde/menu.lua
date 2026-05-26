@@ -41,6 +41,8 @@ function frontend()
   term.setTextColor(tblookup[settings.get("topcolor")])
   term.setCursorPos(1, 1)
   term.write(settings.get("username"))
+  term.setCursorPos((tx-#textutils.formatTime(os.time()))+1, 1)
+  term.write(textutils.formatTime(os.time()))
 
   -- draw apps
   term.setCursorPos(3,3)
