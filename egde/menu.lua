@@ -19,7 +19,6 @@ local app3 = paintutils.parseImage([[
 function backend()
   while true do
     sleep(0.05)
-    frontend()
     -- app clickd
     local event, button, x, y = os.pullEvent("mouse_click")
     if x >= 3 and x <= 5 and y >= 3 and y <= 4 then shell.run("egde/egdia.lua") end
@@ -29,6 +28,8 @@ function backend()
 end
 
 function frontend()
+  while true do
+  sleep(0.05)
   term.clear()
 
   -- top bar
@@ -61,6 +62,7 @@ function frontend()
   term.write("shl")
   term.setCursorPos(13,5)
   term.write("set")
+  end
 end
 
-backend()
+parallel.waitForAny(backend,frontend)
