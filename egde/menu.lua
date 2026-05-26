@@ -2,6 +2,7 @@ term.clear()
 term.setCursorPos(1,1)
 local tx, ty = term.getSize()
 local ender = false
+local tblookup = {[1] = 32768, [2] = 32768, [4] = 32768, [8] = 32768, [16] = 32768, [32] = 32768, [64] = 32768, [128] = 1, [256] = 32768, [512] = 32768, [1024] = 32768, [2048] = 32768, [4096] = 1, [8192] = 1, [16384] = 32768, [32768] = 1}
 local app1 = paintutils.parseImage([[
 785
 787
@@ -33,11 +34,11 @@ function frontend()
   -- top bar
   for i = 1, tx do
     term.setCursorPos(i,1)
-    term.setTextColor(colors.orange)
-    term.setBackgroundColor(colors.orange)
+    term.setTextColor(settings.get("topcolor"))
+    term.setBackgroundColor(settings.get("topcolor"))
     print("#")
   end
-  term.setTextColor(colors.black)
+  term.setTextColor(tblookup[settings.get("topcolor")])
   term.setCursorPos(1, 1)
   term.write(settings.get("username"))
 
